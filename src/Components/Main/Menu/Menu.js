@@ -36,10 +36,7 @@ export default class Menu extends Component {
         navigator.push({ name: 'ORDER_HISTORY' });
     }
 
-   
-
     render() {
-        
         const LogInJSX = (
             <View style={{ flex: 4, backgroundColor: '#00FFFF', justifyContent: 'center', alignContent: 'center' }}>
                 <TouchableOpacity onPress={() => this.gotoAuthentication()}>

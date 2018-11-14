@@ -31,7 +31,7 @@ export default class Authentication extends Component {
         navigator.pop();
     }
     render() {
-        const { actiSign, actiEdSign } = styles;
+        const { actiSign, actiEdSign, btnSigIn, btnSigUp } = styles;
         const MAINISX = this.state.isSigIn ? <SignIn goBackToMain={() => this.goBackToMain()} /> : <SignUp gotoSignIn={() => this.gotoSignIn()} />;
         return (
             <View style={{ flex: 1, backgroundColor: '#FEFEFE' }}>
@@ -44,11 +44,11 @@ export default class Authentication extends Component {
 
                 {MAINISX}
 
-                <View style={{ flex: 2, backgroundColor: '#FFFFFF' }}>
-                    <TouchableOpacity onPress={() => this.gotoSignIn()}>
+                <View style={{ flex: 2, backgroundColor: '#FFFFFF', flexDirection: 'row', justifyContent: 'center', alignContent: 'center' }}>
+                    <TouchableOpacity onPress={() => this.gotoSignIn()} style={btnSigIn}>
                         <Text style={this.state.isSigIn ? actiSign : actiEdSign} >SIGN IN</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity onPress={() => this.gotoSignUp()}>
+                    <TouchableOpacity onPress={() => this.gotoSignUp()} style={btnSigUp}>
                         <Text style={this.state.isSigIn ? actiEdSign : actiSign} >SIGN UP</Text>
                     </TouchableOpacity>
                 </View>
@@ -60,8 +60,34 @@ export default class Authentication extends Component {
 const styles = StyleSheet.create({
     actiSign: {
         color: '#E61A5F',
+        justifyContent: 'center', 
+        alignContent: 'center'
     },
     actiEdSign: {
         color: '#424242',
+        justifyContent: 'center', 
+        alignContent: 'center'
+    }, 
+    btnSigIn: {
+        marginRight: 10,
+        backgroundColor: '#6BA82A',
+        borderTopLeftRadius: 10,
+        borderBottomLeftRadius: 10,
+        height: 60,
+        width: 120,
+        paddingLeft: 10,
+        justifyContent: 'center', 
+        alignContent: 'center'
+    },
+    btnSigUp: {
+        marginLeft: 10,
+        backgroundColor: '#6BA82A',
+        borderTopRightRadius: 10,
+        borderBottomRightRadius: 10,
+        height: 60,
+        width: 120,
+        paddingRight: 10,
+        justifyContent: 'center', 
+        alignContent: 'center'
     }
 })
