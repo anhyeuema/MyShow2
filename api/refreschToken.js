@@ -2,7 +2,7 @@ import getToken from './getToken';
 import saveToken from './saveToken';
 
 const getNewToken = (token) => (
-    fetch('http://192.168.0.102:81/api/refresh_token', {
+    fetch('http://192.168.0.101:81/api/refresh_token', {
         method: 'POST',
         headers: {
             'Content-Type': 'applycation/json',

@@ -7,6 +7,7 @@ import Search from './Search/Search';
 import Cart from './Cart/Cart';
 
 import Header from './Home/Header';
+import initData from '../../../../api/initData';
 
 
 export default class Shop extends Component {
@@ -22,20 +23,11 @@ export default class Shop extends Component {
     }
 
     componentDidMount() {
-        fetch('http://192.168.0.102:81/api/', {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ 
-
-            })
-        })
-        .then(res => res.json())
+        this.setState({ selectedTab: 'home' });
+        initData()
         .then(resJSON => {
-            console.log('----SHOP----');
-            console.log(resJSON);
+           // console.log('----SHOP----');
+           // console.log(resJSON);
             this.setState({ 
                 types: resJSON.type,
                 topProduct: resJSON.product,

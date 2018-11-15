@@ -15,7 +15,7 @@ export default class Home extends Component {
             renderScene={(route, navigator) => {
                 switch (route.name) {
                     case 'HOME_VIEW': return <HomeView navigator={navigator} types={this.props.types} topProduct={this.props.topProduct} />;
-                    case 'PRODUCT_DETAIL': return <ProductDetail navigator={navigator} />;
+                    case 'PRODUCT_DETAIL': return <ProductDetail navigator={navigator} product={route.product} />;
                     default: return <ListProduct navigator={navigator} />;
                 }
             }}

@@ -1,7 +1,7 @@
 
 
 const checkToken = (token) => (
-    fetch('http://192.168.0.102:81/api/check_login', {
+    fetch('http://192.168.0.101:81/api/check_login', {
         method: 'POST',
         headers: {
             'Content-Type': 'applycation/json',

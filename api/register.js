@@ -1,6 +1,6 @@
 
 const register = (name, email, password) => (
-    fetch('http://192.168.0.102:81/api/register.php', {
+    fetch('http://192.168.0.101:81/api/register.php', {
         method: 'POST',
         headers: {
             'Accept': 'application/json',

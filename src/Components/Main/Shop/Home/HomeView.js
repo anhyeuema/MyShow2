@@ -11,12 +11,11 @@ export default class HomeView extends Component {
         return (
             <View style={{ flex: 1, backgroundColor: '#1B6FBB' }}>
                 <Text> Component HomeView</Text>
-                    <Category navigator={this.props.navigator} types={this.props.types} />
-                    <Collection />
-                    <TopProduct topProduct={this.props.topProduct} />
-      
-           
-           {/*
+
+                <TopProduct navigator={this.props.navigator} topProduct={this.props.topProduct} />
+                <Category navigator={this.props.navigator} types={this.props.types} />
+                <Collection />
+                {/*
                 <Category navigator={this.props.navigator} />
                 <Collection />
                 <TopProduct />
@@ -27,7 +26,7 @@ export default class HomeView extends Component {
     }
 }
 
-   {/*
+{/*
                 <Category />
                 <Collection />
                 <TopProduct />

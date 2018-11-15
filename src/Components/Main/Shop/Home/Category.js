@@ -7,7 +7,7 @@ import maxi from '../../../../images-master/temp/maxi.jpg';
 import Swiper from 'react-native-swiper';
 
 const { width, height } = Dimensions.get('window');
-const url = 'http://192.168.0.102:81/api/images/type/';
+const url = 'http://192.168.0.101:81/api/images/type/';
 const imagaWidth = width - 40;
 const imageHeight = imagaWidth / 2; //(imagaWidth / 800) * 400;
 
